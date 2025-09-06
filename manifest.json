@@ -1,0 +1,20 @@
+{
+  "name": "Minuteur",
+  "short_name": "Minuteur",
+  "description": "A modern, stylish timer app.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#232526",
+  "theme_color": "#00c6ff",
+  "icons": [
+    {
+      "src": "icon-app.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+    "permissions": [
+        "notifications"
+    ]
+
+}

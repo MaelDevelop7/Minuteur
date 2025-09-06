@@ -1,0 +1,174 @@
+/* Modern, well-aligned timer app style */
+body {
+    background: linear-gradient(120deg, #232526 0%, #485563 100%);
+    color: #f7f7f7;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.timer-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.2rem;
+    background: rgba(44, 47, 52, 0.85);
+    padding: 1.2rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    flex-wrap: wrap;
+}
+
+label {
+    font-size: 1.08rem;
+    font-weight: 500;
+    margin: 0 0.3rem 0 0;
+    color: #b0b8c1;
+}
+
+input[type="number"] {
+    width: 58px;
+    padding: 0.5rem 0.4rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    background: #23272f;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    outline: none;
+    text-align: center;
+    margin-right: 0.2rem;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus {
+    background: #31343a;
+    box-shadow: 0 0 0 2px #00c6ff55;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    outline: none;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(0,198,255,0.13);
+}
+
+#display {
+    font-size: 3.7rem;
+    font-family: 'Roboto Mono', 'Consolas', monospace;
+    margin-top: 1.5rem;
+    letter-spacing: 4px;
+    background: rgba(44, 47, 52, 0.92);
+    padding: 1.3rem 2.8rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    text-align: center;
+    user-select: none;
+    color: #00c6ff;
+    border: 2px solid #0072ff33;
+    word-break: break-all;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .timer-controls, .buttons-row {
+        gap: 0.7rem;
+        padding: 1rem 1.2rem;
+    }
+    #display {
+        font-size: 2.7rem;
+        padding: 1rem 1.5rem;
+    }
+    input[type="number"] {
+        width: 44px;
+        font-size: 1rem;
+    }
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* ...existing code... */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .timer-controls, .buttons-row {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        max-width: 350px;
+        padding: 0.7rem 0.5rem;
+    }
+    .timer-controls {
+        margin-bottom: 1.2rem;
+        background: rgba(44, 47, 52, 0.92);
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    .timer-controls label {
+        margin: 0 0.2rem 0 0.2rem;
+        font-size: 1rem;
+    }
+    #display {
+        font-size: 1.5rem;
+        padding: 0.7rem 0.5rem;
+        border-radius: 12px;
+    }
+    input[type="number"] {
+        width: 38px;
+        font-size: 1.1rem;
+        padding: 0.4rem 0.2rem;
+        margin: 0 0.1rem;
+    }
+    button {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra: Center timer-controls on all screens for consistency */
+.timer-controls {
+    justify-content: center;
+}
