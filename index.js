@@ -51,8 +51,7 @@ function startTimer() {
         if (remainingSeconds <= 0) {
             stopTimer();
             display.innerText = "Time's up!";
-            alert("Timer finished!");
-            showNotification("Timer", "Time's up!");
+            showNotification("Minuteur", "C'est fini!");
         }
     }, 1000);
 }
